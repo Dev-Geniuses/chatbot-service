@@ -22,6 +22,8 @@ global pipe
 def chat():
     if request.method == 'POST':
         message_send = request.json.get('message')
+        print(message_send)
+        print(type(message_send))
         result = pipe.run(
             query=message_send, 
             params={
